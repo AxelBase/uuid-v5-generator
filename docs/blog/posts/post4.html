@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>%sveltekit.title% – UUID v5 Generator</title>
+    <meta name="description" content="Free, private, client-side UUID v5 (namespace-based) generator. RFC 4122 compliant, works offline, no tracking." />
+    <link rel="icon" href="../../AxelLab-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+		<link href="../../_app/immutable/assets/0.C-91k_B2.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/8.CjgDAGhu.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.B0tTV_CC.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BzyTG-UV.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B0VD4up6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C59M2QhB.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/YyNjWZKU.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.DOYj1v_F.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/P2O06cu6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CguTkIUO.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ClMLRe-O.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C4FNLF0_.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.B91_HjYT.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/QirdmvCL.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BRyTCRlh.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C7oYaYvh.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B2thE6gu.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/XuuUtZ-p.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/8.cFyDUmdM.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BdZWfbly.js"><!--led0iy--><meta name="description" content="Learn how UUID v5 eliminates ID conflicts in distributed databases, microservices, and data migrations using deterministic naming."/> <meta property="og:title" content="Generating Consistent IDs Across Systems"/> <meta property="og:description" content="Say goodbye to duplicate keys during merges. UUID v5 ensures the same entity always gets the same ID — no matter where it's created."/> <meta property="og:url" content="../../blog/posts/post4"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>Generating Consistent IDs Across Systems | UUID v5 Generator Blog</title>
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[--><!----><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/> <header class="custom-navbar"><nav class="container d-flex justify-content-between align-items-center"><div class="d-flex align-items-center gap-3"><a href="../../" aria-label="Home"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-brand-logo"/></a> <a class="navbar-brand-text text-decoration-none" href="../../">AxelBase</a></div> <div class="d-flex align-items-center gap-4"><ul class="d-none d-lg-flex list-unstyled m-0 gap-4 align-items-center"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to-use">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul> <div class="bmac-nav-item"><button class="bmac-button shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> Buy Coffee</button> <!--[!--><!--]--></div></div></nav></header> <main class="flex-grow-1"><!--[--><!----><div class="container fade-in post-layout svelte-led0iy"><div class="breadcrumbs svelte-led0iy"><a href="../../blog" class="svelte-led0iy">Blog</a> <span>/</span> <p class="svelte-led0iy">Generating Consistent IDs Across Systems</p></div> <article class="prose svelte-led0iy"><h1 class="svelte-led0iy">Generating Consistent IDs Across Systems</h1> <p class="post-meta svelte-led0iy">Published: December 1, 2025</p> <p class="svelte-led0iy">In distributed systems, one of the hardest problems is <strong>identity</strong>. When the same entity (user, document, product) is created independently in multiple services or regions, traditional auto-increment IDs or random UUIDs cause conflicts during reconciliation.</p> <p class="svelte-led0iy">UUID v5 solves this elegantly through <strong>deterministic generation</strong>.</p> <h2 class="svelte-led0iy">The Problem with Random IDs</h2> <p class="svelte-led0iy">With UUID v4:</p> <ul class="svelte-led0iy"><li class="svelte-led0iy">User Alice signs up in US → gets <code>f47ac10b-...</code></li> <li class="svelte-led0iy">Alice signs up in EU (before sync) → gets <code>8a2e7d9f-...</code></li> <li class="svelte-led0iy">Merge conflict → manual resolution required</li></ul> <h2 class="svelte-led0iy">The UUID v5 Solution</h2> <p class="svelte-led0iy">With UUID v5 + a canonical namespace:</p> <ul class="svelte-led0iy"><li class="svelte-led0iy">US service: <code>uuid_v5(DNS, "alice@example.com")</code> → <code>9f8e2d1a-...</code></li> <li class="svelte-led0iy">EU service: same input → <code>9f8e2d1a-...</code></li> <li class="svelte-led0iy">No conflict. Ever.</li></ul> <h2 class="svelte-led0iy">Real-World Patterns</h2> <p class="svelte-led0iy">Leading companies use this approach for:</p> <ul class="svelte-led0iy"><li class="svelte-led0iy"><strong>Multi-region databases</strong> (CockroachDB, Yugabyte)</li> <li class="svelte-led0iy"><strong>Offline-first apps</strong> (generate IDs before sync)</li> <li class="svelte-led0iy"><strong>Event sourcing</strong> (aggregate roots from stream names)</li> <li class="svelte-led0iy"><strong>CI/CD pipelines</strong> (build IDs from git commit + branch)</li></ul> <h2 class="svelte-led0iy">Implementation Tips</h2> <ul class="svelte-led0iy"><li class="svelte-led0iy">Use a shared namespace UUID across all services</li> <li class="svelte-led0iy">Standardize name formatting (lowercase, trimmed)</li> <li class="svelte-led0iy">Document your naming conventions</li> <li class="svelte-led0iy">Store the source name alongside the UUID for debugging</li></ul> <h2 class="svelte-led0iy">FAQ</h2> <details class="svelte-led0iy"><summary class="svelte-led0iy">What if two teams use different namespaces?</summary> <p class="svelte-led0iy">You’ll get collisions. Always define organization-wide canonical namespaces.</p></details> <details class="svelte-led0iy"><summary class="svelte-led0iy">Can I change the name later?</summary> <p class="svelte-led0iy">Only if you accept a new ID. v5 IDs are immutable by design.</p></details> <p class="italic-note svelte-led0iy">UUID v5 doesn’t just generate identifiers — it creates consensus without coordination.</p></article></div><!----><!--]--></main> <footer class="text-center py-4 mt-auto"><div class="container"><p class="mb-2 text-white-50">AxelBase UUID v5 (Namespace) Generator – 2025</p> <div class="d-flex justify-content-center gap-3"><a href="../../privacy">Privacy Policy</a> <span class="text-white-50">•</span> <a href="../../terms">Terms of Service</a></div></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1s0djb1 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/uuid-v5-generator"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.B0tTV_CC.js"),
+						import("../../_app/immutable/entry/app.DOYj1v_F.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
